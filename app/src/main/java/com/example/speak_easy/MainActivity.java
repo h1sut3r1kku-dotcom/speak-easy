@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Инициализация базы
+        // инициализация базы
         db = AppDatabase.getDatabase(this);
 
-        // Добавление категорий при первом запуске
+        // добавление категорий при первом запуске
         new Thread(() -> {
             if (db.categoryDao().getAllCategories().isEmpty()) {
                 db.categoryDao().insert(new Category("Быт"));

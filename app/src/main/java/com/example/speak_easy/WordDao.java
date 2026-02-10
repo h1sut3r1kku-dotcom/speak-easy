@@ -1,4 +1,3 @@
-// app/src/main/java/com/example/speak_easy/WordDao.java
 package com.example.speak_easy;
 
 import androidx.room.Dao;

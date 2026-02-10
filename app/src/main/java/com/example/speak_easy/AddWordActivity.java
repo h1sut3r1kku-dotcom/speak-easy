@@ -59,7 +59,6 @@ public class AddWordActivity extends AppCompatActivity {
                     actvCategory.setText(names.get(0), false);
                     selectedCategoryId = categories.get(0).id;
 
-                    // ←←← ОТКРЫВАЕТ СПИСОК ПО КЛИКУ →→→
                     actvCategory.setOnClickListener(v -> {
                         actvCategory.showDropDown();
                     });
@@ -130,7 +129,7 @@ public class AddWordActivity extends AppCompatActivity {
         new Thread(() -> {
             int categoryIdToSave;
             if (selectedCategoryId == -1 && !customCategoryName.isEmpty()) {
-                // Находим ID только что созданной категории
+                // поиск ID только что созданной категории
                 List<Category> all = db.categoryDao().getAllCategories();
                 for (Category c : all) {
                     if (c.name.equals(customCategoryName)) {

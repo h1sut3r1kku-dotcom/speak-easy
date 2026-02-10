@@ -48,7 +48,7 @@ public class WordCardActivity extends AppCompatActivity {
                 }
             }
             if (foundWord != null) {
-                // Получаем имя категории
+                // получаем имя категории
                 String categoryName = "Без категории";
                 List<Category> categories = db.categoryDao().getAllCategories();
                 for (Category cat : categories) {

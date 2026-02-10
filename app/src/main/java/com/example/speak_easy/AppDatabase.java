@@ -25,7 +25,7 @@ public abstract class AppDatabase extends RoomDatabase {
                                     AppDatabase.class,
                                     "word_database"
                             )
-                            .fallbackToDestructiveMigration() // ← решает вылеты
+                            .fallbackToDestructiveMigration()
                             .build();
                 }
             }

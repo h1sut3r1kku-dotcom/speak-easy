@@ -1,4 +1,3 @@
-// app/src/main/java/com/example/speak_easy/WordAdapter.java
 package com.example.speak_easy;
 
 import android.content.Intent;

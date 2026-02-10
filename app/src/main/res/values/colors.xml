@@ -1,4 +1,3 @@
-<!-- res/values/colors.xml -->
 <resources>
     <color name="background">#232429</color>
     <color name="surface">#26262D</color>
