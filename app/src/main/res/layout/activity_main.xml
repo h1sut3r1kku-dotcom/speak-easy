@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E24"
+    android:orientation="vertical"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="32dp">
+
+    <!-- Логотип -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="speak"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        android:textColor="#FB9901"
+        android:fontFamily="sans-serif-medium" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="easy"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="4dp" />
+
+    <!-- Поиск -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        style="@style/Widget.TextInput.Outlined.Rounded"
+        app:endIconDrawable="@drawable/ic_search"
+        app:endIconMode="custom">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Поиск слов"
+            android:inputType="text"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#A0A0A0"
+            android:background="@null"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Сообщение или список -->
+    <TextView
+        android:id="@+id/tv_no_words"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Ещё нет слов!\nНажмите + чтобы добавить\nзапись слова"
+    android:textAlignment="center"
+    android:textSize="16sp"
+    android:textColor="#A0A0A0"
+    android:lineSpacingExtra="4dp"
+    android:fontFamily="sans-serif-light" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp" />
+
+    <!-- Кнопка + -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/ic_plus"
+        app:tint="#FFFFFF"
+        app:backgroundTint="#FB9901"
+        android:contentDescription="Добавить слово" />
+
+</LinearLayout>

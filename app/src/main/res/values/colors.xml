@@ -1,0 +1,9 @@
+<!-- res/values/colors.xml -->
+<resources>
+    <color name="background">#232429</color>
+    <color name="surface">#26262D</color>
+    <color name="border">#3A3A4A</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#A0A0A0</color>
+    <color name="primary">#FB9901</color>
+</resources>
